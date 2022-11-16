@@ -1,0 +1,4 @@
+namespace: argocd
+resources:
+- repo-airflow-cd.yaml
+- repo-dags.yaml

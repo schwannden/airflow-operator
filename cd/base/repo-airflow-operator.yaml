@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  insecure: dHJ1ZQ==
+  name: your-airflow-operator-repo-name-in-base64
+  project: ZGVmYXVsdA==
+  sshPrivateKey: your-base64-ssh-key
+  type: Z2l0
+  url: your-base64-repo-key
+kind: Secret
+metadata:
+  annotations:
+    managed-by: argocd.argoproj.io
+  labels:
+    argocd.argoproj.io/secret-type: repository
+  name: repo-airflow-operator
+  namespace: argocd
+type: Opaque

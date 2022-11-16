@@ -1,0 +1,19 @@
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- |-
+  apiVersion: v1
+  data:
+    connection: your-db-connection-in-base64
+  kind: Secret
+  metadata:
+    name: airflow-airflow-result-backend
+  ---
+  apiVersion: v1
+  data:
+    connection: your-db-connection-in-base64
+  kind: Secret
+  metadata:
+    name: airflow-airflow-metadata
+
